@@ -30,10 +30,9 @@ work {
      description: string
 display: function
 
-function myWorkExperience() {
-
-}
-}
+function myWorkExperience() { var experience = '{jobs: [   employer: "NYC
+Office of Management and Budget", title: "Supervisory Analyst", location: "New
+York, New York", dates: "October 2006 - Current", description: "Monitor and analyze New York City human service agencies’ operational and financial activities."]' } }
 
 // Projects
 projects {

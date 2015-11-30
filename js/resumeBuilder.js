@@ -4,17 +4,17 @@ This is empty on purpose! Your code to build the resume will go here.
 
 // Bio
 bio {
-  name : string
-role : string
+  "name" : "Keith Green"
+"role" : string
 contacts : an object with
-      mobile: string
-      email: string
-      github: string
-      twitter: string
-      location: string
+      "mobile": "646-236-5101"
+      "email": "kegreen22@gmail.com"
+      "github": "https://github.com/kegreen22"
+      "twitter": string
+      "location": string
 welcomeMessage: string
 skills: array of strings
-biopic: url
+"biopic": url
 display: function
 }
 

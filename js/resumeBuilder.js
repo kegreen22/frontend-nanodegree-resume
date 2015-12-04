@@ -4,17 +4,17 @@ This is empty on purpose! Your code to build the resume will go here.
 
 // Bio
 bio {
-  "name" : "Keith Green"
-"role" : string
-contacts : an object with
-      "mobile": "646-236-5101"
-      "email": "kegreen22@gmail.com"
-      "github": "https://github.com/kegreen22"
-      "twitter": string
-      "location": string
-welcomeMessage: string
-skills: array of strings
-"biopic": url
+  "name" : "Keith Green",
+"role" : "Junior Web Developer",
+"contacts" : {
+      "mobile": "646-236-5101",
+      "email": "kegreen22@gmail.com",
+      "github": "https://github.com/kegreen22",
+      "twitter": "None",
+      "location": "Brooklyn, New York"},
+"welcomeMessage": "Welcome to my home page",
+"skills": "Ruby, Ruby on Rails, HTML, CSS, SQL, Testing (RSpec).",
+"biopic": None
 display: function
 }
 
@@ -34,12 +34,12 @@ display: function}
 // Projects
 projects {
 "projects": [
-      {"title": "Treble Interests",
+      {"title": "Treble Interests - Located at: treble-interests.herokuapp.com",
       "dates": "Summer 2015",
       "description": "Ruby on Rails application that enables users to receive news and networking opportunities based on their interests.",
-      "images": array with string urls}
+      "images": array with string urls},
 
-      {"title": "CitySpring",
+      {"title": "CitySpring - Located at: cityspring.herokuapp.com",
       "dates": "Summer 2014",
       "description": "Ruby on Rails application to help parents find NYC child resources (e.g., child care, programs, parks, etc.) by address."
       "images": array with string urls}

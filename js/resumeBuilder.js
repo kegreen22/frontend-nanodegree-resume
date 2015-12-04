@@ -22,52 +22,55 @@ display: function
 
 // Work Experience
 work {
-  jobs: array of objects with
-     employer: string
-     title: string
-     location: string
-     dates: string (works with a hyphen between them)
-     description: string
-display: function
+  “jobs”:
+     “employer”: “NYC Office of Management and Budget”,
+     “title”: “Supervisory Analyst”,
+     “location”: “New York, NY”,
+     “dates”: “October 2006 – Current”,
+     "description": "Monitor and analyze New York City human service agencies’ operational and financial activities."
+display: function}
 
-function myWorkExperience() { var experience = '{jobs: [   employer: "NYC
-Office of Management and Budget", title: "Supervisory Analyst", location: "New
-York, New York", dates: "October 2006 - Current", description: "Monitor and analyze New York City human service agencies’ operational and financial activities."]' } }
 
 // Projects
 projects {
-projects: array of objects with
-      title: string
-      dates: string (works with a hyphen between them)
-      description: string
-      images: array with string urls
+"projects": [
+      {"title": "Treble Interests",
+      "dates": "Summer 2015",
+      "description": "Ruby on Rails application that enables users to receive news and networking opportunities based on their interests.",
+      "images": array with string urls}
+
+      {"title": "CitySpring",
+      "dates": "Summer 2014",
+      "description": "Ruby on Rails application to help parents find NYC child resources (e.g., child care, programs, parks, etc.) by address."
+      "images": array with string urls}
+
+    ]
 display: function
-
-function myProjects() {
-
 }
-}
+
 
 education {
-schools: array of objects with
-     name: string
-     location: string
-     degree: string
-     majors: array of strings
-     dates: integer (graduation date)
-     url: string
-onlineCourses: array of objects with
-     title: string
-     school: string
-     date: integer (date finished)
-     url: string
+  {"name": "University of Pittsburgh",
+       "location": "Pittsburgh, PA",
+       "degree": "MS in Information Systems, MBA",
+       "majors": "Information Systems and Business Administration",
+       "dates": "2001",
+       "url": "pitt.edu"}
+  "onlineCourses": [{
+       “title”: “Rapid Prototyping with Ruby on Rails”,
+      “ School”: “Launch School”,
+       “date”: “Spring 2015”,
+       “url”: “https://launchschool.com/”
+     },
+      {“title”: “Front-End Web Developer Nanodegree”,
+      “ School”: “Udacity”,
+       “date”: “Spring 2016”,
+       “url”: “https://www.udacity.com”
+     }
+   ]
 display: function
-
+}
 // Education
-function myEducation() {
-
-}
-}
 
 
 

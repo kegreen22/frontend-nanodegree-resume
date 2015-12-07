@@ -1,9 +1,8 @@
 /*
 This is empty on purpose! Your code to build the resume will go here.
  */
-
-// Bio
-bio {
+{
+"bio": {
   "name" : "Keith Green",
 "role" : "Junior Web Developer",
 "contacts" : {
@@ -14,64 +13,58 @@ bio {
       "location": "Brooklyn, New York"},
 "welcomeMessage": "Welcome to my home page",
 "skills": "Ruby, Ruby on Rails, HTML, CSS, SQL, Testing (RSpec).",
-"biopic": None
-display: function
+"biopic": "None",
+"display": "function"}
 }
 
+{
+"work": {
+  "jobs": [
+    {"employer": "NYC Office of Management and Budget",
+    "title": "Supervisory Analyst",
+    "location": "New York, NY",
+    "dates": "October 2006 - Current",
+    "description": "Monitor and analyze New York City human service agencies' operational and financial activities."}
+     ],
+"display": "function"}
+}
 
-
-// Work Experience
-work {
-  “jobs”:
-     “employer”: “NYC Office of Management and Budget”,
-     “title”: “Supervisory Analyst”,
-     “location”: “New York, NY”,
-     “dates”: “October 2006 – Current”,
-     "description": "Monitor and analyze New York City human service agencies’ operational and financial activities."
-display: function}
-
-
-// Projects
-projects {
+{
+"projects": {
 "projects": [
       {"title": "Treble Interests - Located at: treble-interests.herokuapp.com",
       "dates": "Summer 2015",
       "description": "Ruby on Rails application that enables users to receive news and networking opportunities based on their interests.",
-      "images": array with string urls},
+      "images": "array with string urls"},
 
       {"title": "CitySpring - Located at: cityspring.herokuapp.com",
       "dates": "Summer 2014",
-      "description": "Ruby on Rails application to help parents find NYC child resources (e.g., child care, programs, parks, etc.) by address."
-      "images": array with string urls}
-
-    ]
-display: function
+      "description": "Ruby on Rails application to help parents find NYC child resources (e.g., child care, programs, parks, etc.) by address.",
+      "images": "array with string urls"}
+    ],
+    "display": "function"}
 }
 
-
-education {
+{
+"education": {
   {"name": "University of Pittsburgh",
        "location": "Pittsburgh, PA",
        "degree": "MS in Information Systems, MBA",
        "majors": "Information Systems and Business Administration",
        "dates": "2001",
        "url": "pitt.edu"}
-  "onlineCourses": [{
-       “title”: “Rapid Prototyping with Ruby on Rails”,
-      “ School”: “Launch School”,
-       “date”: “Spring 2015”,
-       “url”: “https://launchschool.com/”
-     },
-      {“title”: “Front-End Web Developer Nanodegree”,
-      “ School”: “Udacity”,
-       “date”: “Spring 2016”,
-       “url”: “https://www.udacity.com”
-     }
-   ]
-display: function
+  "onlineCourses": [
+    {"title": "Rapid Prototyping with Ruby on Rails",
+    "school": "Launch School",
+    "date": "2015",
+    "url": "https://launchschool.com"},
+    {"title": "Front-End Web Developer Nanodegree",
+    "school": "Udacity",
+    "date": "2016",
+    "url": "https://www.udacity.com"}
+   ],
+"display": "function"}
 }
-// Education
-
 
 
 // Map info

@@ -46,24 +46,28 @@ This is empty on purpose! Your code to build the resume will go here.
 }
 
 {
-"education": {
-  {"name": "University of Pittsburgh",
-       "location": "Pittsburgh, PA",
-       "degree": "MS in Information Systems, MBA",
-       "majors": "Information Systems and Business Administration",
-       "dates": "2001",
-       "url": "pitt.edu"}
-  "onlineCourses": [
-    {"title": "Rapid Prototyping with Ruby on Rails",
-    "school": "Launch School",
-    "date": "2015",
-    "url": "https://launchschool.com"},
-    {"title": "Front-End Web Developer Nanodegree",
-    "school": "Udacity",
-    "date": "2016",
-    "url": "https://www.udacity.com"}
-   ],
-"display": "function"}
+	"education": {
+		"education": {
+			"name": "University of Pittsburgh",
+			"location": "Pittsburgh, PA",
+			"degree": "MS in Information Systems, MBA",
+			"majors": "Information Systems and Business Administration",
+			"dates": "2001",
+			"url": "pitt.edu"
+		},
+		"onlineCourses": [{
+			"title": "Rapid Prototyping with Ruby on Rails",
+			"school": "Launch School",
+			"date": "2015",
+			"url": "https://launchschool.com"
+		}, {
+			"title": "Front-End Web Developer Nanodegree",
+			"school": "Udacity",
+			"date": "2016",
+			"url": "https://www.udacity.com"
+		}],
+		"display": "function"
+	}
 }
 
 

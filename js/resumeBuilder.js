@@ -17,6 +17,21 @@ This is empty on purpose! Your code to build the resume will go here.
 "display": "function"}
 }
 
+var formattedName = HTMLheaderName.replace("%data", bio.name);
+$("#name").append(formattedName);
+// var headerrole
+
+// var formattedContact = HTMLcontactGeneric.replace("%data%", bio.)
+var formattedMobile = HTMLmobile.replace("%data%", bio.mobile);
+// there is no unique id or class to use jquery to append/prepend
+var formattedEmail = HTMLemail.replace("%data%", bio.email);
+var formattedGithub = HTMLgithub.replace("%data%", bio.github);
+var formattedLocation = HTMLlocation.replace("%data", bio.location);
+
+var formattedWelcome = HTMLwelcomeMsg.replace("%data", bio.welcomeMessage);
+
+// skills
+
 {
 "work": {
   "jobs": [
@@ -53,7 +68,7 @@ This is empty on purpose! Your code to build the resume will go here.
 			"degree": "MS in Information Systems, MBA",
 			"majors": "Information Systems and Business Administration",
 			"dates": "2001",
-			"url": "pitt.edu"
+			"url": "http://www.pitt.edu/"
 		},
 		"onlineCourses": [{
 			"title": "Rapid Prototyping with Ruby on Rails",

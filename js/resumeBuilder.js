@@ -15,8 +15,8 @@ This is empty on purpose! Your code to build the resume will go here.
 "skills": "Ruby, Ruby on Rails, HTML, CSS, SQL, Testing (RSpec).",
 "biopic": "None",
 "display": "function"}
-}
 
+function bio() {
 var formattedName = HTMLheaderName.replace("%data", bio.name);
 $("#name").append(formattedName);
 // var headerrole
@@ -29,6 +29,9 @@ var formattedGithub = HTMLgithub.replace("%data%", bio.github);
 var formattedLocation = HTMLlocation.replace("%data", bio.location);
 
 var formattedWelcome = HTMLwelcomeMsg.replace("%data", bio.welcomeMessage);
+}
+}
+
 
 // skills
 
@@ -42,6 +45,24 @@ var formattedWelcome = HTMLwelcomeMsg.replace("%data", bio.welcomeMessage);
     "description": "Monitor and analyze New York City human service agencies' operational and financial activities."}
      ],
 "display": "function"}
+
+function work() {
+  //work information
+var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+$(".work-entry:last").append(formattedWorkEmployer);
+
+var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+$(".work-entry:last").append(formattedWorkTitle);
+
+var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+$(".work-entry:last").append(formattedWorkDates);
+
+var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+$(".work-entry:last").append(formattedWorkLocation);
+
+var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+$(".work-entry:last").append(formattedWorkDescription);
+}
 }
 
 {
@@ -58,6 +79,20 @@ var formattedWelcome = HTMLwelcomeMsg.replace("%data", bio.welcomeMessage);
       "images": "array with string urls"}
     ],
     "display": "function"}
+    function projects() {
+      // projects
+var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.project[project].title);
+$(".project-entry:last").append(formattedProjectTitle);
+
+var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.project[project].dates);
+$(".project-entry:last").append(formattedProjectDates);  // or maybe use div - "date-text
+
+var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.project[project].description);
+$(".project-entry:last").append(formattedProjectDescription);
+
+var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.project[project].images);
+$(".project-entry:last").append(formattedProjectImage);
+    }
 }
 
 {
@@ -83,6 +118,37 @@ var formattedWelcome = HTMLwelcomeMsg.replace("%data", bio.welcomeMessage);
 		}],
 		"display": "function"
 	}
+
+function education() {
+  // education
+var formattedSchoolName = HTMLschoolName.replace("%data%", schools.name);
+$(".education-entry:last").append(formattedSchoolName);
+
+var formattedSchoolDegree = HTMLschoolName.replace("%data%", schools.degree);
+$(".education-entry:last").append(formattedSchoolDegree);
+
+var formattedSchoolDates = HTMLschoolDates.replace("%data%", schools.dates);
+$(".education-entry:last").append(formattedSchoolDates);
+
+var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", schools.location);
+$(".education-entry:last").append(formattedSchoolLocation);
+
+var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", schools.majors);
+$(".education-entry:last").append(formattedSchoolMajor);
+
+// online education
+var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", schools.onlineCourses.title);
+$(".education-entry:last").append(formattedOnlineTitle);
+
+var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", schools.onlineCourses.school);
+$(".education-entry:last").append(formattedOnlineSchool);
+
+var formattedOnlineDates = HTMLonlineDates.replace("%data%", schools.onlineCourses.date);
+$(".education-entry:last").append(formattedOnlineDates);
+
+var formattedOnlineURL = HTMLonlineURL.replace("%data%", schools.onlineURL.url);
+$(".education-entry:last").append(formattedOnlineURL);
+}
 }
 
 

@@ -16,7 +16,7 @@ This is empty on purpose! Your code to build the resume will go here.
 "biopic": "None",
 "display": "function"}
 
-function bio() {
+function mybio() {
 var formattedName = HTMLheaderName.replace("%data", bio.name);
 $("#name").append(formattedName);
 // var headerrole
@@ -46,7 +46,7 @@ var formattedWelcome = HTMLwelcomeMsg.replace("%data", bio.welcomeMessage);
      ],
 "display": "function"}
 
-function work() {
+function mywork() {
   //work information
 var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
 $(".work-entry:last").append(formattedWorkEmployer);
@@ -79,7 +79,8 @@ $(".work-entry:last").append(formattedWorkDescription);
       "images": "array with string urls"}
     ],
     "display": "function"}
-    function projects() {
+
+    function myprojects() {
       // projects
 var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.project[project].title);
 $(".project-entry:last").append(formattedProjectTitle);
@@ -119,7 +120,7 @@ $(".project-entry:last").append(formattedProjectImage);
 		"display": "function"
 	}
 
-function education() {
+function myeducation() {
   // education
 var formattedSchoolName = HTMLschoolName.replace("%data%", schools.name);
 $(".education-entry:last").append(formattedSchoolName);
@@ -151,6 +152,10 @@ $(".education-entry:last").append(formattedOnlineURL);
 }
 }
 
+mybio();
+mywork();
+myprojects();
+myeducation();
 
 // Map info
 // <div id=”mapDiv”>

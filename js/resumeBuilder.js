@@ -19,17 +19,21 @@ This is empty on purpose! Your code to build the resume will go here.
 function mybio() {
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 $("#name").append(formattedName);
-// var headerrole
 
-// var formattedContact = HTMLcontactGeneric.replace("%data%", bio.)
 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-// there is no unique id or class to use jquery to append/prepend
+$("#mobile").append(formattedMobile);
 var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+$("#email").append(formattedEmail);
 var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+$("#github").append(formattedGithub);
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+$("#location").append(formattedLocation);
 var formattedSkills = HTMLskills.replace("%data%", bio.skills);
+$("#skills").append(formattedSkills);
 var formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic);
+$(".biopic").append(formattedBiopic);
 var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+$(".welcome-message").append(formattedWelcome);
 }
 mybio();
 }

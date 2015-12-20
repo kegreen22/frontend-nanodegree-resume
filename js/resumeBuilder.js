@@ -12,12 +12,12 @@ This is empty on purpose! Your code to build the resume will go here.
       "twitter": "None",
       "location": "Brooklyn, New York"},
 "welcomeMessage": "Welcome to my home page",
-"skills": "Ruby, Ruby on Rails, HTML, CSS, SQL, Testing (RSpec).",
-"biopic": "None",
+"skills": "Ruby, Ruby on Rails, HTML, CSS, SQL, Testing (RSpec)",
+"biopic": "\images\Kgreen1.jpg",
 "display": "function"}
 
 function mybio() {
-var formattedName = HTMLheaderName.replace("%data", bio.name);
+var formattedName = HTMLheaderName.replace("%data%", bio.name);
 $("#name").append(formattedName);
 // var headerrole
 
@@ -26,10 +26,11 @@ var formattedMobile = HTMLmobile.replace("%data%", bio.mobile);
 // there is no unique id or class to use jquery to append/prepend
 var formattedEmail = HTMLemail.replace("%data%", bio.email);
 var formattedGithub = HTMLgithub.replace("%data%", bio.github);
-var formattedLocation = HTMLlocation.replace("%data", bio.location);
+var formattedLocation = HTMLlocation.replace("%data%", bio.location);
 
-var formattedWelcome = HTMLwelcomeMsg.replace("%data", bio.welcomeMessage);
+var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 }
+mybio();
 }
 
 
@@ -63,6 +64,7 @@ $(".work-entry:last").append(formattedWorkLocation);
 var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 $(".work-entry:last").append(formattedWorkDescription);
 }
+mywork();
 }
 
 {
@@ -94,6 +96,7 @@ $(".project-entry:last").append(formattedProjectDescription);
 var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.project[project].images);
 $(".project-entry:last").append(formattedProjectImage);
     }
+    myprojects();
 }
 
 {
@@ -150,12 +153,13 @@ $(".education-entry:last").append(formattedOnlineDates);
 var formattedOnlineURL = HTMLonlineURL.replace("%data%", schools.onlineURL.url);
 $(".education-entry:last").append(formattedOnlineURL);
 }
+myeducation();
 }
 
-mybio();
-mywork();
-myprojects();
-myeducation();
+
+
+
+
 
 // Map info
 // <div id=”mapDiv”>

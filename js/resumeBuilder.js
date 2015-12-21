@@ -1,8 +1,8 @@
 /*
 This is empty on purpose! Your code to build the resume will go here.
  */
-{
-"bio": {
+
+var bio = {
   "name" : "Keith Green",
 "role" : "Junior Web Developer",
 "contacts" : {
@@ -14,12 +14,11 @@ This is empty on purpose! Your code to build the resume will go here.
 "welcomeMessage": "Welcome to my home page",
 "skills": "Ruby, Ruby on Rails, HTML, CSS, SQL, Testing (RSpec)",
 "biopic": "\images\Kgreen1.jpg",
-"display": "function"}
+"display": "function"
 
-function mybio() {
+(function() {
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 $("#name").append(formattedName);
-
 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 $("#mobile").append(formattedMobile);
 var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
@@ -34,14 +33,13 @@ var formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic);
 $(".biopic").append(formattedBiopic);
 var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 $(".welcome-message").append(formattedWelcome);
-}
-mybio();
+})();
 }
 
 
 // skills
 
-{
+var mywork = {
 "work": {
   "jobs": [
     {"employer": "NYC Office of Management and Budget",
@@ -51,7 +49,7 @@ mybio();
     "description": "Monitor and analyze New York City human service agencies' operational and financial activities."}
      ],
 "display": "function"}
-
+}
 function mywork() {
   //work information
 var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[0].employer);
@@ -70,9 +68,9 @@ var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[0
 $(".work-entry:last").append(formattedWorkDescription);
 }
 mywork();
-}
 
-{
+
+var myprojects = {
 "projects": {
 "projects": [
       {"title": "Treble Interests - Located at: treble-interests.herokuapp.com",
@@ -86,26 +84,27 @@ mywork();
       "images": "array with string urls"}
     ],
     "display": "function"}
-
+}
     function myprojects() {
       // projects
-var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[0].title);
+      for (var i = 0; i < projects.length; i++)
+      {
+var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
 $(".project-entry:last").append(formattedProjectTitle);
 
-var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[0].dates);
+var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
 $(".project-entry:last").append(formattedProjectDates);  // or maybe use div - "date-text
 
-var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[0].description);
+var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
 $(".project-entry:last").append(formattedProjectDescription);
 
-var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[0].images);
+var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[i].images);
 $(".project-entry:last").append(formattedProjectImage);
-    }
+    }}
     myprojects();
-}
 
-{
-	"education": {
+
+var education = {
 		"schools": {
 			"name": "University of Pittsburgh",
 			"location": "Pittsburgh, PA",
@@ -126,7 +125,7 @@ $(".project-entry:last").append(formattedProjectImage);
 			"url": "https://www.udacity.com"
 		}],
 		"display": "function"
-	}
+	}}
 
 function myeducation() {
   // education
@@ -159,7 +158,7 @@ var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineURL[0].
 $(".education-entry:last").append(formattedOnlineURL);
 }
 myeducation();
-}
+
 
 
 

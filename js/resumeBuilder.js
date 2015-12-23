@@ -2,7 +2,7 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 
-var bio = {
+{ "bio": {
   "name" : "Keith Green",
 "role" : "Junior Web Developer",
 "contacts" : {
@@ -13,10 +13,9 @@ var bio = {
       "location": "Brooklyn, New York"},
 "welcomeMessage": "Welcome to my home page",
 "skills": "Ruby, Ruby on Rails, HTML, CSS, SQL, Testing (RSpec)",
-"biopic": "\images\Kgreen1.jpg",
-"display": "function"
-
-(function() {
+"biopic": "/images/Kgreen1.jpg",
+"display":
+  (function () {
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 $("#name").append(formattedName);
 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
@@ -35,7 +34,7 @@ var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 $(".welcome-message").append(formattedWelcome);
 })();
 }
-
+}
 
 // skills
 

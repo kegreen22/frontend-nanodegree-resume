@@ -2,7 +2,7 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 
-{ "bio": {
+var bio = {
   "name" : "Keith Green",
 "role" : "Junior Web Developer",
 "contacts" : {
@@ -15,9 +15,11 @@ This is empty on purpose! Your code to build the resume will go here.
 "skills": "Ruby, Ruby on Rails, HTML, CSS, SQL, Testing (RSpec)",
 "biopic": "/images/Kgreen1.jpg",
 "display":
-  (function () {
+  function () {
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 $("#name").append(formattedName);
+var formattedRole = HTMLheaderRole.replace(%data%, bio.role);
+    $("#header").prepend(formattedRole);
 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 $("#mobile").append(formattedMobile);
 var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
@@ -32,9 +34,9 @@ var formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic);
 $(".biopic").append(formattedBiopic);
 var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 $(".welcome-message").append(formattedWelcome);
-})();
 }
 }
+
 
 // skills
 

@@ -18,8 +18,8 @@ var bio = {
   function () {
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
 $("#name").append(formattedName);
-var formattedRole = HTMLheaderRole.replace(%data%, bio.role);
-    $("#header").prepend(formattedRole);
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+    $("#role").prepend(formattedRole);
 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 $("#mobile").append(formattedMobile);
 var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
@@ -49,9 +49,7 @@ var mywork = {
     "dates": "October 2006 - Current",
     "description": "Monitor and analyze New York City human service agencies' operational and financial activities."}
      ],
-"display": "function"}
-}
-function mywork() {
+"display": function (){
   //work information
 var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[0].employer);
 $(".work-entry:last").append(formattedWorkEmployer);
@@ -68,8 +66,8 @@ $(".work-entry:last").append(formattedWorkLocation);
 var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[0].description);
 $(".work-entry:last").append(formattedWorkDescription);
 }
-mywork();
-
+}
+}
 
 var myprojects = {
 "projects": {
@@ -84,9 +82,7 @@ var myprojects = {
       "description": "Ruby on Rails application to help parents find NYC child resources (e.g., child care, programs, parks, etc.) by address.",
       "images": "array with string urls"}
     ],
-    "display": "function"}
-}
-    function myprojects() {
+    "display": function () {
       // projects
       for (var i = 0; i < projects.length; i++)
       {
@@ -102,7 +98,7 @@ $(".project-entry:last").append(formattedProjectDescription);
 var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[i].images);
 $(".project-entry:last").append(formattedProjectImage);
     }}
-    myprojects();
+  }}
 
 
 var education = {
@@ -125,10 +121,7 @@ var education = {
 			"date": "2016",
 			"url": "https://www.udacity.com"
 		}],
-		"display": "function"
-	}}
-
-function myeducation() {
+		"display": function () {
   // education
 var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools.name);
 $(".education-entry:last").append(formattedSchoolName);
@@ -158,7 +151,7 @@ $(".education-entry:last").append(formattedOnlineDates);
 var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineURL[0].url);
 $(".education-entry:last").append(formattedOnlineURL);
 }
-myeducation();
+}
 
 
 

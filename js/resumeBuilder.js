@@ -13,7 +13,7 @@ var bio = {
       "location": "Brooklyn, New York"},
 "welcomeMessage": "Welcome to my home page",
 "skills": ["Ruby", " Ruby on Rails", " HTML", " CSS", " SQL", " Testing (RSpec)"],
-"biopic": "/images/Kgreen1.jpg",
+"biopic": "\images\Kgreen1.jpg",
 "display":
   function () {
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -43,30 +43,29 @@ bio.display();
 
 var mywork = {
 "work": {
-  "jobs": [
+  "jobs":
     {"employer": "NYC Office of Management and Budget",
     "title": "Supervisory Analyst",
     "location": "New York, NY",
     "dates": "October 2006 - Current",
     "description": "Monitor and analyze New York City human service agencies' operational and financial activities."}
-     ],
-"display": function (){
+     },
+"display": function () {
   //work information
-var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[0].employer);
+var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", mywork.work.jobs.employer);
 $(".work-entry:last").append(formattedWorkEmployer);
 
-var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[0].title);
+var formattedWorkTitle = HTMLworkTitle.replace("%data%", mywork.work.jobs.title);
 $(".work-entry:last").append(formattedWorkTitle);
 
-var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[0].dates);
+var formattedWorkDates = HTMLworkDates.replace("%data%", mywork.work.jobs.dates);
 $(".work-entry:last").append(formattedWorkDates);
 
-var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[0].location);
+var formattedWorkLocation = HTMLworkLocation.replace("%data%", mywork.work.jobs.location);
 $(".work-entry:last").append(formattedWorkLocation);
 
-var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[0].description);
+var formattedWorkDescription = HTMLworkDescription.replace("%data%", mywork.work.jobs.description);
 $(".work-entry:last").append(formattedWorkDescription);
-}
 }
 };
 mywork.display();
@@ -83,24 +82,24 @@ var myprojects = {
       "dates": "Summer 2014",
       "description": "Ruby on Rails application to help parents find NYC child resources (e.g., child care, programs, parks, etc.) by address.",
       "images": "array with string urls"}
-    ],
+    ]},
     "display": function () {
       // projects
       for (var i = 0; i < projects.length; i++)
       {
-var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[i].title);
+var formattedProjectTitle = HTMLprojectTitle.replace("%data%", myprojects.projects.projects[i].title);
 $(".project-entry:last").append(formattedProjectTitle);
 
-var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[i].dates);
+var formattedProjectDates = HTMLprojectDates.replace("%data%", myprojects.projects.projects[i].dates);
 $(".project-entry:last").append(formattedProjectDates);  // or maybe use div - "date-text
 
-var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[i].description);
+var formattedProjectDescription = HTMLprojectDescription.replace("%data%", myprojects.projects.projects[i].description);
 $(".project-entry:last").append(formattedProjectDescription);
 
-var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[i].images);
+var formattedProjectImage = HTMLprojectImage.replace("%data%", myprojects.projects.projects[i].images);
 $(".project-entry:last").append(formattedProjectImage);
-    }}
-  }};
+    }}};
+
   myprojects.display();
 
 

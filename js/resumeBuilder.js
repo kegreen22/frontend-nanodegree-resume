@@ -12,30 +12,31 @@ var bio = {
       "twitter": "None",
       "location": "Brooklyn, New York"},
 "welcomeMessage": "Welcome to my home page",
-"skills": "Ruby, Ruby on Rails, HTML, CSS, SQL, Testing (RSpec)",
+"skills": ["Ruby", " Ruby on Rails", " HTML", " CSS", " SQL", " Testing (RSpec)"],
 "biopic": "/images/Kgreen1.jpg",
 "display":
   function () {
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
-$("#name").append(formattedName);
+$("#header").prepend(formattedName);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-    $("#role").prepend(formattedRole);
+    $("#header").prepend(formattedRole);
 var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-$("#mobile").append(formattedMobile);
+$("#topContacts").append(formattedMobile);
 var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-$("#email").append(formattedEmail);
+$("#topContacts").append(formattedEmail);
 var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-$("#github").append(formattedGithub);
+$("#topContacts").append(formattedGithub);
 var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-$("#location").append(formattedLocation);
+$("#topContacts").append(formattedLocation);
 var formattedSkills = HTMLskills.replace("%data%", bio.skills);
-$("#skills").append(formattedSkills);
+$("#header").append(formattedSkills);
 var formattedBiopic = HTMLbioPic.replace("%data%", bio.biopic);
-$(".biopic").append(formattedBiopic);
+$("#header").append(formattedBiopic);
 var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-$(".welcome-message").append(formattedWelcome);
+$("#topContacts").append(formattedWelcome);
 }
-}
+};
+bio.display();
 
 
 // skills
@@ -67,7 +68,8 @@ var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[0
 $(".work-entry:last").append(formattedWorkDescription);
 }
 }
-}
+};
+mywork.display();
 
 var myprojects = {
 "projects": {
@@ -98,7 +100,8 @@ $(".project-entry:last").append(formattedProjectDescription);
 var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[i].images);
 $(".project-entry:last").append(formattedProjectImage);
     }}
-  }}
+  }};
+  myprojects.display();
 
 
 var education = {
@@ -161,4 +164,4 @@ $(".education-entry:last").append(formattedOnlineURL);
 
 // Map info
 // <div id=”mapDiv”>
-$("#mapDiv").append(formattedLocation);
+//$("#mapDiv").append(formattedLocation);

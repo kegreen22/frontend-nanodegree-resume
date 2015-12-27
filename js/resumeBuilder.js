@@ -13,7 +13,7 @@ var bio = {
       "location": "Brooklyn, New York"},
 "welcomeMessage": "Welcome to my home page",
 "skills": ["Ruby", " Ruby on Rails", " HTML", " CSS", " SQL", " Testing (RSpec)"],
-"biopic": "\images\Kgreen1.jpg",
+"biopic": "images/Kgreen2.jpg",
 "display":
   function () {
 var formattedName = HTMLheaderName.replace("%data%", bio.name);

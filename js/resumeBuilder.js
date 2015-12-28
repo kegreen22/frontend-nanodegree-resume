@@ -166,5 +166,5 @@ education.display();
 
 
 // Map info
-// <div id=”mapDiv”>
-//$("#mapDiv").append(formattedLocation);
+//<div id=”mapDiv”>
+$("#mapDiv").append(bio.display.formattedLocation);

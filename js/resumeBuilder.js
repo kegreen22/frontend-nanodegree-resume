@@ -40,42 +40,43 @@ bio.display();
 
 
 var work = {
-  "jobs":
+  "jobs":[
     {"employer": "NYC Office of Management and Budget",
     "title": "Supervisory Analyst",
     "location": "New York, NY",
     "dates": "October 2006 - Current",
-    "description": "Monitor and analyze New York City human service agencies' operational and financial activities."},
+    "description": "Monitor and analyze New York City human service agencies' operational and financial activities."}],
     "display": function () {
   //work information
+  for (job in work.jobs) {
   $("#workExperience").append(HTMLworkStart);
-var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs.employer);
+var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
 $(".work-entry:last").append(formattedWorkEmployer);
 
-var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs.title);
+var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
 $(".work-entry:last").append(formattedWorkTitle);
 
-var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs.dates);
+var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
 $(".work-entry:last").append(formattedWorkDates);
 
-var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs.location);
+var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
 $(".work-entry:last").append(formattedWorkLocation);
 
-var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs.description);
+var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 $(".work-entry:last").append(formattedWorkDescription);
-}
+}}
 };
 work.display();
 
 
 var projects = {
 "projects": [
-      {"title": "Treble Interests - Located at: treble-interests.herokuapp.com",
+      {"title": "Treble Interests",
       "dates": "Summer 2015",
       "description": "Ruby on Rails application that enables users to receive news and networking opportunities based on their interests.",
       "images": ""},
 
-      {"title": "CitySpring - Located at: cityspring.herokuapp.com",
+      {"title": "CitySpring",
       "dates": "Summer 2014",
       "description": "Ruby on Rails application to help parents find NYC child resources (e.g., child care, programs, parks, etc.) by address.",
       "images": ""}
@@ -104,14 +105,14 @@ $(".project-entry:last").append(formattedProjectImage);
 
 // education
 var education = {
-		"schools": {
+		"schools": [{
 			"name": "University of Pittsburgh",
 			"location": "Pittsburgh, PA",
 			"degree": "MS in Information Systems, MBA",
 			"majors": "Information Systems and Business Administration",
 			"dates": "2001",
 			"url": "http://www.pitt.edu/"
-		},
+		}],
 		"onlineCourses": [{
 			"title": "Rapid Prototyping with Ruby on Rails",
 			"school": "Launch School",
@@ -124,23 +125,24 @@ var education = {
 			"url": "https://www.udacity.com"
 		}],
 		"display": function () {
-   //   for (school in education.schools) {
-      $("#education").append(HTMLschoolStart);
-var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools.name);
+// education
+for (school in education.schools) {
+$("#education").append(HTMLschoolStart);
+var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
 $(".education-entry:last").append(formattedSchoolName);
 
-var formattedSchoolDegree = HTMLschoolName.replace("%data%", education.schools.degree);
+var formattedSchoolDegree = HTMLschoolName.replace("%data%", education.schools[school].degree);
 $(".education-entry:last").append(formattedSchoolDegree);
 
-var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools.dates);
+var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
 $(".education-entry:last").append(formattedSchoolDates);
 
-var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools.location);
+var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
 $(".education-entry:last").append(formattedSchoolLocation);
 
-var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools.majors);
+var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
 $(".education-entry:last").append(formattedSchoolMajor);
-
+}
 
 // online education
 for (course in education.onlineCourses) {
@@ -167,4 +169,4 @@ education.display();
 
 // Map info
 //<div id=”mapDiv”>
-$("#mapDiv").append(bio.display.formattedLocation);
+$("#mapDiv").append(googleMap);

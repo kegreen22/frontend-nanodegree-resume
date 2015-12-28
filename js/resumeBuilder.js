@@ -123,9 +123,9 @@ var education = {
 			"date": "2016",
 			"url": "https://www.udacity.com"
 		}],
-		"display": function () {for (project in projects.projects) {
-
-      $("#projects").append(HTMLprojectStart);
+		"display": function () {
+   //   for (school in education.schools) {
+      $("#education").append(HTMLschoolStart);
 var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools.name);
 $(".education-entry:last").append(formattedSchoolName);
 
@@ -141,21 +141,24 @@ $(".education-entry:last").append(formattedSchoolLocation);
 var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools.majors);
 $(".education-entry:last").append(formattedSchoolMajor);
 
+
 // online education
-var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[0].title);
+for (course in education.onlineCourses) {
+$("#education").append(HTMLschoolStart);
+var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
 $(".education-entry:last").append(formattedOnlineTitle);
 
-var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[0].school);
+var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
 $(".education-entry:last").append(formattedOnlineSchool);
 
-var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[0].date);
+var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].date);
 $(".education-entry:last").append(formattedOnlineDates);
 
-var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineURL[0].url);
+var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
 $(".education-entry:last").append(formattedOnlineURL);
 }
 }};
-//education.display();
+education.display();
 
 
 

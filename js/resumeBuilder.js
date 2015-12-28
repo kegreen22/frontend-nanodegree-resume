@@ -39,70 +39,70 @@ $("#topContacts").append(formattedWelcome);
 bio.display();
 
 
-// skills
-
-var mywork = {
-"work": {
+var work = {
   "jobs":
     {"employer": "NYC Office of Management and Budget",
     "title": "Supervisory Analyst",
     "location": "New York, NY",
     "dates": "October 2006 - Current",
-    "description": "Monitor and analyze New York City human service agencies' operational and financial activities."}
-     },
-"display": function () {
+    "description": "Monitor and analyze New York City human service agencies' operational and financial activities."},
+    "display": function () {
   //work information
-var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", mywork.work.jobs.employer);
+  $("#workExperience").append(HTMLworkStart);
+var formattedWorkEmployer = HTMLworkEmployer.replace("%data%", work.jobs.employer);
 $(".work-entry:last").append(formattedWorkEmployer);
 
-var formattedWorkTitle = HTMLworkTitle.replace("%data%", mywork.work.jobs.title);
+var formattedWorkTitle = HTMLworkTitle.replace("%data%", work.jobs.title);
 $(".work-entry:last").append(formattedWorkTitle);
 
-var formattedWorkDates = HTMLworkDates.replace("%data%", mywork.work.jobs.dates);
+var formattedWorkDates = HTMLworkDates.replace("%data%", work.jobs.dates);
 $(".work-entry:last").append(formattedWorkDates);
 
-var formattedWorkLocation = HTMLworkLocation.replace("%data%", mywork.work.jobs.location);
+var formattedWorkLocation = HTMLworkLocation.replace("%data%", work.jobs.location);
 $(".work-entry:last").append(formattedWorkLocation);
 
-var formattedWorkDescription = HTMLworkDescription.replace("%data%", mywork.work.jobs.description);
+var formattedWorkDescription = HTMLworkDescription.replace("%data%", work.jobs.description);
 $(".work-entry:last").append(formattedWorkDescription);
 }
 };
-mywork.display();
+work.display();
 
-var myprojects = {
-"projects": {
+
+var projects = {
 "projects": [
       {"title": "Treble Interests - Located at: treble-interests.herokuapp.com",
       "dates": "Summer 2015",
       "description": "Ruby on Rails application that enables users to receive news and networking opportunities based on their interests.",
-      "images": "array with string urls"},
+      "images": ""},
 
       {"title": "CitySpring - Located at: cityspring.herokuapp.com",
       "dates": "Summer 2014",
       "description": "Ruby on Rails application to help parents find NYC child resources (e.g., child care, programs, parks, etc.) by address.",
-      "images": "array with string urls"}
-    ]},
+      "images": ""}
+    ],
     "display": function () {
       // projects
-      for (var i = 0; i < projects.length; i++)
+      for (project in projects.projects) {
+    $("#projects").append(HTMLprojectStart);
       {
-var formattedProjectTitle = HTMLprojectTitle.replace("%data%", myprojects.projects.projects[i].title);
+var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
 $(".project-entry:last").append(formattedProjectTitle);
 
-var formattedProjectDates = HTMLprojectDates.replace("%data%", myprojects.projects.projects[i].dates);
+var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
 $(".project-entry:last").append(formattedProjectDates);  // or maybe use div - "date-text
 
-var formattedProjectDescription = HTMLprojectDescription.replace("%data%", myprojects.projects.projects[i].description);
+var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
 $(".project-entry:last").append(formattedProjectDescription);
 
-var formattedProjectImage = HTMLprojectImage.replace("%data%", myprojects.projects.projects[i].images);
+var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images);
 $(".project-entry:last").append(formattedProjectImage);
-    }}};
+    }}}};
 
-  myprojects.display();
+  projects.display();
 
 
+
+// education
 var education = {
 		"schools": {
 			"name": "University of Pittsburgh",
@@ -123,8 +123,9 @@ var education = {
 			"date": "2016",
 			"url": "https://www.udacity.com"
 		}],
-		"display": function () {
-  // education
+		"display": function () {for (project in projects.projects) {
+
+      $("#projects").append(HTMLprojectStart);
 var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools.name);
 $(".education-entry:last").append(formattedSchoolName);
 
@@ -153,8 +154,8 @@ $(".education-entry:last").append(formattedOnlineDates);
 var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineURL[0].url);
 $(".education-entry:last").append(formattedOnlineURL);
 }
-}
-
+}};
+//education.display();
 
 
 

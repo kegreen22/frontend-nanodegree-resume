@@ -75,14 +75,14 @@ var projects = {
             "title": "Treble Interests",
             "dates": "Summer 2015",
             "description": "Ruby on Rails application that enables users to receive news and networking opportunities based on their interests.",
-            "images": ""
+            "images": [{""}]
         },
 
         {
             "title": "CitySpring",
             "dates": "Summer 2014",
             "description": "Ruby on Rails application to help parents find NYC child resources (e.g., child care, programs, parks, etc.) by address.",
-            "images": ""
+            "images": [{""}]
         }
     ],
     "display": function() {
@@ -115,7 +115,7 @@ var education = {
         "name": "University of Pittsburgh",
         "location": "Pittsburgh, PA",
         "degree": "MS in Information Systems, MBA",
-        "majors": "Information Systems and Business Administration",
+        "majors": [{"Information Systems and Business Administration"}],
         "dates": "2001",
         "url": "http://www.pitt.edu/"
     }],
@@ -146,7 +146,7 @@ var education = {
             var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
             $(".education-entry:last").append(formattedSchoolLocation);
 
-            var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
+            var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors[0]);
             $(".education-entry:last").append(formattedSchoolMajor);
         }
 
